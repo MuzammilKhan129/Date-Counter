@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .counter {
@@ -15,6 +16,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 320px;
+  max-width: 100%;
 }
 
 .counter h2 {
@@ -28,6 +30,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 1.2rem;
+  flex-wrap: wrap; /* wrap on smaller screens */
 }
 
 .controls span {
@@ -46,6 +49,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
+  min-width: 60px;
 }
 
 button:hover {
@@ -60,4 +64,30 @@ button:active {
   font-size: 1.1rem;
   margin-top: 1rem;
   color: #444;
+}
+
+/* 🔹 Responsive Breakpoints */
+@media (max-width: 480px) {
+  .counter {
+    padding: 1.5rem 1rem;
+    width: 100%;
+  }
+
+  .counter h2 {
+    font-size: 1.2rem;
+  }
+
+  .controls span {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
 }
