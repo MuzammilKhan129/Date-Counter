@@ -1,93 +1,88 @@
-.App {
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f6f9;
-  min-height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Quicksand", sans-serif;
+  background: linear-gradient(135deg, #f4a226, #76c7ad);
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  min-height: 100vh;
 }
 
 .counter {
   background: #fff;
-  padding: 2rem 3rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   text-align: center;
-  width: 320px;
-  max-width: 100%;
+  max-width: 450px;
+  width: 100%;
 }
 
 .counter h2 {
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 2.8rem;
+  color: #5a3e2b;
+  margin-bottom: 2rem;
 }
 
 .controls {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 1.2rem;
-  flex-wrap: wrap; /* wrap on smaller screens */
-}
-
-.controls span {
-  margin: 0 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 1.5rem 0;
 }
 
 button {
-  background: #7950f2;
+  background-color: #76c7ad;
   border: none;
   color: #fff;
-  font-size: 1.2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  font-size: 2rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 1rem;
   cursor: pointer;
-  transition: background 0.2s ease-in-out;
-  min-width: 60px;
+  transition: 0.2s;
 }
 
 button:hover {
-  background: #6741d9;
+  background-color: #5a3e2b;
 }
 
-button:active {
-  background: #5f3dc4;
+input[type="range"] {
+  width: 150px;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 80px;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+  border: 2px solid #ddd;
 }
 
 .message {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  color: #444;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: #333;
 }
 
-/* 🔹 Responsive Breakpoints */
-@media (max-width: 480px) {
-  .counter {
-    padding: 1.5rem 1rem;
-    width: 100%;
-  }
-
-  .counter h2 {
-    font-size: 1.2rem;
-  }
-
-  .controls span {
-    font-size: 1rem;
-    margin: 0 0.5rem;
-  }
-
-  button {
-    font-size: 1rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .message {
-    font-size: 1rem;
-  }
+.message strong {
+  display: block;
+  font-size: 2rem;
+  color: #e5771f;
+  margin-top: 0.5rem;
 }

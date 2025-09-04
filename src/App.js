@@ -19,16 +19,26 @@ function Counter() {
   return (
     <div className="counter">
       <h2>Date Counter</h2>
-
       <div className="controls">
-        <button onClick={() => setStep((s) => s - 1)}>-</button>
+        <input
+          type="range"
+          min="0"
+          max="10"
+          value={step}
+          onChange={(e) => setStep(Number(e.target.value))}
+        />
+        {/* <button onClick={() => setStep((s) => s - 1)}>-</button> */}
         <span>Step: {step}</span>
-        <button onClick={() => setStep((s) => s + 1)}>+</button>
+        {/* <button onClick={() => setStep((s) => s + 1)}>+</button> */}
       </div>
 
       <div className="controls">
         <button onClick={() => setCount((c) => c - step)}>-</button>
-        <span>Count: {count}</span>
+        <input
+          type="text"
+          value={count}
+          onChange={(e) => setCount(Number(e.target.value))}
+        />
         <button onClick={() => setCount((c) => c + step)}>+</button>
       </div>
 
