@@ -55,11 +55,13 @@ function Counter() {
           : `${Math.abs(count)} days ago was `}
         <strong>{date.toDateString()}</strong>
       </p>
-      <div>
-        <button className="reset-btn" onClick={handleButton}>
-          🔄 Reset
-        </button>
-      </div>
+      {count !== 0 || step !== 0 ? (
+        <div>
+          <button className="reset-btn" onClick={handleButton}>
+            🔄 Reset
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }
