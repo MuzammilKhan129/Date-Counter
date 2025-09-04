@@ -13,6 +13,11 @@ function Counter() {
   const [count, setCount] = useState(0);
   const [step, setStep] = useState(1);
 
+  function handleButton() {
+    setCount(0);
+    setStep(1);
+  }
+
   const date = new Date();
   date.setDate(date.getDate() + count);
 
@@ -50,6 +55,11 @@ function Counter() {
           : `${Math.abs(count)} days ago was `}
         <strong>{date.toDateString()}</strong>
       </p>
+      <div>
+        <button className="reset-btn" onClick={handleButton}>
+          🔄 Reset
+        </button>
+      </div>
     </div>
   );
 }
